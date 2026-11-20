@@ -10,16 +10,14 @@ using namespace std;
 #include "shapeFuncs.h"
 #include "utility.h"
 
+#include <cmath> //only way to use std::pow and std::sqrt
+
 // Compute distance between two points
 
 double distanceBetween(Point p, Point q) {
-  return 99999.9; // @@@ STUB
-  // HINTS: The distance formula is something you hopefully remember
-  //   from H.S. algebra, but if not, Wikipedia is your friend.
-  //   The sqrt function is available when you use #include <cmath>, 
-  //   and pow(expresssion,2.0) will return expression squared.
-  // You can access p.x, p.y, q.x and q.y and use those in your formula.
-
+  // sqrt((y2-y1)^2 + (x2-x1)^2)
+  // std has sqrt function
+  return sqrt(pow(q.x-p.x, 2)+pow(q.y-p.y, 2));
 }
 
  
