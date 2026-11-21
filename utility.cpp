@@ -1,3 +1,6 @@
+#include "utility.h"
+#include <cmath>
+
 // utility.cpp
 
 // IN THIS FILE, define any of your OWN functions you may need to 
@@ -13,4 +16,8 @@ double pow(double x, int n){
     for (int i=1; i<n; i++)
         temp *= x;
     return temp;
+}
+
+bool approxEqual(double a, double b, double tolerance) {
+  return fabs(a - b) < tolerance;
 }

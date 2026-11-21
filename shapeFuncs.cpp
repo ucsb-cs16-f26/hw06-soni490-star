@@ -57,12 +57,11 @@ bool pointsApproxEqual(Point p1,
 }
 
 bool boxesApproxEqual(Box b1, Box b2, double tolerance) {
-  // ul check: box -> point ul -> x,y.
-  // width and height check after
-  return (pointsApproxEqual(b1.ul, b2.ul)) 
-  && (fabs(b1.width-b2.width) < tolerance)
-  && (fabs(b1.height-b2.height) < tolerance);
+  return pointsApproxEqual(b1.ul, b2.ul, tolerance)
+      && approxEqual(b1.width, b2.width, tolerance)
+      && approxEqual(b1.height, b2.height, tolerance);
 }
+
 
 void initBox(struct Box *b, double ulx, double uly, double w, double h){
   (b->ul).x = ulx;

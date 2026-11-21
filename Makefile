@@ -18,6 +18,7 @@ tests: ${BINARIES}
 	./initBoxTest
 	./areaOfBoxTest
 	./pointToStringTest
+	./boxToStringTest	
 
 
 distanceBetweenTest: distanceBetweenTest.o $(COMMON_OBJECTS)
@@ -41,6 +42,9 @@ initBoxTest: initBoxTest.o $(COMMON_OBJECTS)
 
 pointToStringTest: pointToStringTest.o $(COMMON_OBJECTS)
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -o $@
+
+boxToStringTest: boxToStringTest.o $(COMMON_OBJECTS) 
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -o $@ 
 
 clean:
 	/bin/rm -f ${BINARIES} *.o

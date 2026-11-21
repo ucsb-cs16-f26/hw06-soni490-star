@@ -1,3 +1,6 @@
+#ifndef UTILITY_H
+#define UTILITY_H
+
 // utility.h
 
 // IN THIS FILE, declare (function prototype only) any of your 
@@ -8,3 +11,7 @@
 // these functions
 
 double pow(double x, int n);
+
+bool approxEqual(double a, double b, double tolerance);
+
+#endif // UTILITY_H
