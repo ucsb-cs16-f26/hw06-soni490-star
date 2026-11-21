@@ -62,16 +62,6 @@ bool boxesApproxEqual(Box b1, Box b2, double tolerance) {
   && (fabs(b1.height-b2.height) < tolerance);
 }
 
-
-// Now write a function to initialize a box.
-// You'll need to initialize the upper left x and y,
-// the width and the height.
-// Note: there is a struct Point inside the struct Box.
-// So here's a clue: For the x value, use (*b).ul.x or (b->ul).x 
-//  The y value is similar.
-// There is also a way to "reuse" initPoint, if you are feeling 
-//  confident in your understanding of pointers and structs.
-
 void initBox(struct Box *b, double ulx, double uly, double w, double h){
   (b->ul).x = ulx;
   (b->ul).y = uly;
@@ -79,8 +69,6 @@ void initBox(struct Box *b, double ulx, double uly, double w, double h){
   b->height = h;
 }
 
-
 double areaOfBox(Box b) {
-  return -42.0;  /* stub---make sure all tests fail initially */
-  // you can use b.width to access width, and b.height to access height
+  return b.width*b.height;
 }
