@@ -8,3 +8,9 @@
 // then be sure to  #include "utility.h" in the file where you use
 // these functions
 
+double pow(double x, int n){
+    double temp = x;
+    for (int i=1; i<n; i++)
+        temp *= x;
+    return temp;
+}
